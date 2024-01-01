@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise2</title>
+<link href="layout.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="centerbox">
+        <form action="\", method="post", name="logInForm">
+            <p>username/e-mail</p>
+            <input type="text" name="username" id="1" onkeyup="checkForm()" placeholder="e.g. human@example.com"> 
+            <p>password</p> 
+            <input type="password" name="password" id="2" onkeyup="checkForm()" placeholder="enter password">
+            <a href="remember.html">Forgot password?</a>
+            <input type="submit" value="Log in" disabled = "disabled" id="3">
+        </form>
+    </div>
+
+    <script>
+        function checkForm(){
+            if(document.getElementById("1").value.length == 0 ||
+               document.getElementById("2").value.length == 0){
+               document.getElementById("3").disabled = true;
+            } else {
+               document.getElementById("3").disabled = false;
+            }      
+        };
+
+    </script>
+</body>
+
+
+
+
+
+
+
+
+</html>
